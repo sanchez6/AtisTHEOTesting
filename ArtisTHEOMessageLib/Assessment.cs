@@ -13,7 +13,7 @@ namespace ArtisTHEOMessageLib
         public Assessment(string TextoValoracion)
         {
             this.TextoValoracion = TextoValoracion;
-            
+            this.ListaComentarios = new List<CommentToAssessment>();
         }
         public string GetMessageText()
         {
@@ -22,12 +22,12 @@ namespace ArtisTHEOMessageLib
 
         public void AddComment(CommentToAssessment comentario)
         {
-            
+            throw new NotImplementedException();
         }
 
         public int GetNumberOfComments()
         {
-            throw new NotImplementedException();
+            return this.ListaComentarios.Count();
         }
 
         public bool IsRoot()
