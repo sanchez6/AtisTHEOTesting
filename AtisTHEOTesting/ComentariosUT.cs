@@ -10,7 +10,7 @@ namespace AtisTHEOTesting
     public class ComentariosUT
     {
         [Fact]
-        public void TestMetodo1()
+        public void TestCrearUnaValoracion()
         {
             //Arrange
             string TextoValoracion = "Este es el mensaje de prueba de mi primera valoración";
@@ -21,6 +21,19 @@ namespace AtisTHEOTesting
             //Assert
             Assert.Equal(TextoValoracion, valoracion.GetMessageText());
 
+        }
+
+        [Fact]
+        public void TestCrearUnComentario()
+        {
+            //Arrange
+            string TextoComentario = "Esto es un comentario para una valoración";
+
+            //Act
+            CommentToAssessment comentario = new CommentToAssessment(TextoComentario);
+
+            //Assert
+            Assert.Equal(TextoComentario, comentario.GetMessageText());
         }
     }
 }
