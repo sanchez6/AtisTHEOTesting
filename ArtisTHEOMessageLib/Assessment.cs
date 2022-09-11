@@ -22,7 +22,7 @@ namespace ArtisTHEOMessageLib
 
         public void AddComment(CommentToAssessment comentario)
         {
-            throw new NotImplementedException();
+            this.ListaComentarios.Add(comentario);
         }
 
         public int GetNumberOfComments()

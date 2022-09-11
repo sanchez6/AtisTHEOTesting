@@ -49,5 +49,19 @@ namespace AtisTHEOTesting
             Assert.Equal(0, numeroComentarios);
 
         }
+
+        [Fact]
+        public void TestAddComentarioAUnaValoracion()
+        {
+            //Arrange
+            Assessment valoracion = new Assessment("Esto es una valoración con id: 1");
+            CommentToAssessment comentario = new CommentToAssessment("Esto es un comentario a la valoración con id: 1");
+
+            //Act
+            valoracion.AddComment(comentario);
+
+            //Assert
+            Assert.Equal(1, valoracion.GetNumberOfComments());
+        }
     }
 }
