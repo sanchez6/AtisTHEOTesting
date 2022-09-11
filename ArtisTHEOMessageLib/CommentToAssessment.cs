@@ -15,7 +15,7 @@ namespace ArtisTHEOMessageLib
         }
         public string GetMessageText()
         {
-            throw new NotImplementedException();
+            return TextoComentario;
         }
 
         public bool IsRoot()
