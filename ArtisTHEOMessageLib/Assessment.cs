@@ -9,13 +9,25 @@ namespace ArtisTHEOMessageLib
     public class Assessment : IMessage
     {
         private string TextoValoracion;
+        private List<CommentToAssessment> ListaComentarios;
         public Assessment(string TextoValoracion)
         {
             this.TextoValoracion = TextoValoracion;
+            
         }
         public string GetMessageText()
         {
             return this.TextoValoracion;
+        }
+
+        public void AddComment(CommentToAssessment comentario)
+        {
+            
+        }
+
+        public int GetNumberOfComments()
+        {
+            throw new NotImplementedException();
         }
 
         public bool IsRoot()

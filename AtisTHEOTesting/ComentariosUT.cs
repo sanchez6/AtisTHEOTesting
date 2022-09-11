@@ -35,5 +35,19 @@ namespace AtisTHEOTesting
             //Assert
             Assert.Equal(TextoComentario, comentario.GetMessageText());
         }
+
+        [Fact]
+        public void TestObtenerNumeroDeComentariosDeUnaValoracion()
+        {
+            //Arrange
+            Assessment valoracion = new Assessment("Esto es una valoración sin hijos");
+
+            //Act
+            int numeroComentarios = valoracion.GetNumberOfComments();
+
+            //Assert
+            Assert.Equal(0, numeroComentarios);
+
+        }
     }
 }
